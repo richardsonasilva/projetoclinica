@@ -6,6 +6,7 @@
 package visão;
 
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,9 +18,9 @@ public class TelaLogin extends javax.swing.JFrame {
      * Creates new form TelaLogin
      */
     public TelaLogin() {
-        initComponents();     
+        initComponents();
         setIcon();
-        
+
     }
 
     /**
@@ -46,6 +47,11 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabelSenha.setText("Senha :");
 
         jButtonAcessar.setText("Acessar");
+        jButtonAcessar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAcessarActionPerformed(evt);
+            }
+        });
 
         jButtonSair.setText("Sair");
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +105,16 @@ public class TelaLogin extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButtonSairActionPerformed
 
+    private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcessarActionPerformed
+        if (jTextFieldUsuario.getText().equals("admin") && jPasswordFieldSenha.getText().equals("123")) {
+            TelaPrincipal tela = new TelaPrincipal();
+            tela.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário ou senha incorreta !", "Atenção !", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButtonAcessarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -147,5 +163,4 @@ public class TelaLogin extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagens/favicon.png")));
     }
 
-   
 }
