@@ -38,6 +38,7 @@ public class TelaSobre extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CPE Tecnologia");
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setUndecorated(true);
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
 
