@@ -50,6 +50,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCadastro.setText("Cadastro");
 
         jMenuItemMedicos.setText("Médicos");
+        jMenuItemMedicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemMedicosActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItemMedicos);
 
         jMenuItemPacientes.setText("Pacientes");
@@ -113,6 +118,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         TelaSobre tela = new TelaSobre();
         tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemSobreActionPerformed
+
+    private void jMenuItemMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMedicosActionPerformed
+        FormMedico tela = new FormMedico();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItemMedicosActionPerformed
 
     /**
      * @param args the command line arguments
